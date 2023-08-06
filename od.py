@@ -2,15 +2,14 @@ import random
 import csv
 
 # staff per day
-PER = 4
+PER = 2
+DAYS = 30
 
 # File of staff
 FILE = "fullstaff.txt"
 
 staff_array = []
 schedule = []
-
-
 
 
 # open and read the file
@@ -81,12 +80,16 @@ def print_schedule():
     for a in schedule:
         print(a)
     print("-----------------------------------------------------------------------------")
-    print(assignments)
+    print("Number of ODs per each staff:")
+    for staff_member in assignments:
+        print(staff_member + ": " + str(assignments[staff_member]))
+    print("-----------------------------------------------------------------------------")
+        
     
     
 def export():
     # Path to the CSV file
-    csv_file_path = 'od.csv'
+    csv_file_path = 'od_schedule.csv'
 
     # Write the data to the CSV file
     with open(csv_file_path, mode='w', newline='') as file:
@@ -95,11 +98,11 @@ def export():
         writer.writerow(cols)
         writer.writerows(schedule)
     
-    print("Data has been exported to " + csv_file_path)
+    print("\nData has been exported to " + csv_file_path + '\n')
 
 
 def main():
-    for _ in range(16):
+    for _ in range(DAYS):
         assign()
     print_schedule()
     export()
