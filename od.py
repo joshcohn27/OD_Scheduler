@@ -2,14 +2,17 @@ import random
 import csv
 
 # staff per day
-PER = 2
-DAYS = 30
+PER = 3
+DAYS = 33
 
 # File of staff
 FILE = "fullstaff.txt"
 
 staff_array = []
 schedule = []
+
+# Column headers for export file
+COL_HEADERS = ['M1', 'M2', 'M3']
 
 
 # open and read the file
@@ -94,8 +97,7 @@ def export():
     # Write the data to the CSV file
     with open(csv_file_path, mode='w', newline='') as file:
         writer = csv.writer(file)
-        cols = ['M1', 'M2', 'M3', 'M4']
-        writer.writerow(cols)
+        writer.writerow(COL_HEADERS)
         writer.writerows(schedule)
     
     print("\nData has been exported to " + csv_file_path + '\n')
