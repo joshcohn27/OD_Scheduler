@@ -2,7 +2,7 @@ import random
 import csv
 
 # staff per day
-PER = 3
+PER = 2
 DAYS = 33
 
 # File of staff
@@ -12,7 +12,10 @@ staff_array = []
 schedule = []
 
 # Column headers for export file
-COL_HEADERS = ['M1', 'M2', 'M3']
+VIL = 'T'
+COL_HEADERS = []
+for i in range(PER):
+    COL_HEADERS.append(VIL + str(i+1))
 
 
 # open and read the file
@@ -64,17 +67,20 @@ def assign():
                 assignments[st] += 1
       
 # For manually assigning a day
-def manual(n1,n2,n3,n4):          
-    li = list()
-    li.append(n1)
-    li.append(n2)
-    li.append(n3)
-    li.append(n4)
-    assignments[n1] += 1
-    assignments[n2] += 1
-    assignments[n3] += 1
-    assignments[n4] += 1
-    return li
+
+# Needs to be edited to account for changing variables
+
+# def manual(n1,n2,n3,n4):          
+#     li = list()
+#     li.append(n1)
+#     li.append(n2)
+#     li.append(n3)
+#     li.append(n4)
+#     assignments[n1] += 1
+#     assignments[n2] += 1
+#     assignments[n3] += 1
+#     assignments[n4] += 1
+#     return li
 
 
 # printing the schedule
