@@ -2,17 +2,17 @@ import random
 import csv
 
 # staff per day
-PER = 2
+PER = 1
 DAYS = 33
 
 # File of staff
-FILE = "fullstaff.txt"
+FILE = "staff.txt"
 
 staff_array = []
 schedule = []
 
 # Column headers for export file
-VIL = 'T'
+VIL = 'M'
 COL_HEADERS = []
 for i in range(PER):
     COL_HEADERS.append(VIL + str(i+1))
