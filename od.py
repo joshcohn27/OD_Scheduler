@@ -2,11 +2,11 @@ import random
 import csv
 
 # staff per day
-PER = 1
-DAYS = 33
+PER = 3
+DAYS = 23
 
 # File of staff
-FILE = "staff.txt"
+FILE = "fullstaff.txt"
 
 staff_array = []
 schedule = []
