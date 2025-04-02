@@ -21,7 +21,7 @@ def load_staff(file_path):
         print("An error occurred while reading the staff file.")
         exit()
 
-# Read schedule template and count O and C days
+# Read schedule template
 def load_schedule_template(file_path):
     try:
         with open(file_path, 'r') as file:
@@ -33,10 +33,6 @@ def load_schedule_template(file_path):
     except IOError:
         print("An error occurred while reading the schedule file.")
         exit()
-
-# Returns the staff with the lowest assignment count
-def lowest(assignments):
-    return min(assignments.values())
 
 # Check if staff was scheduled the previous day
 def check_previous_day(schedule, staff):
@@ -52,7 +48,7 @@ def assign_staff(staff, schedule_template):
     def assign_day(day_type):
         available_staff = sorted(
             [s for s in staff if not check_previous_day(schedule, s)],
-            key=lambda x: assignments[x][day_type]
+            key=lambda x: (assignments[x][day_type], sum(assignments[x].values()))
         )
         selected = available_staff[:PER]
         for st in selected:
@@ -72,7 +68,7 @@ def print_schedule(schedule, assignments):
     print("--------------------------------------------------")
     print("Assignments per staff:")
     for staff, counts in assignments.items():
-        print(f"{staff} -> O: {counts['O']}, C: {counts['C']}")
+        print(f"{staff} -> O: {counts['O']}, C: {counts['C']}, Total: {sum(counts.values())}")
     print("--------------------------------------------------")
 
 # Export schedule to CSV

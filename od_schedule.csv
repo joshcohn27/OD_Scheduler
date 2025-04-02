@@ -2,23 +2,23 @@ M1,M2,M3
 Rubin,Chuck,Samuel
 Hayden,Henry,Tommie
 Simon,Louie,Jack
+Carter,Ryan,Kfir
+Nathan,Josh Nozik,Guy
+Brodsky,Kanter,Kinel
+A Steinfeld,J Steinfeld,Billy
+Koss,Carter,Ryan
 Rubin,Chuck,Samuel
-Carter,Ryan,Kfir
+Kfir,Brodsky,Kanter
 Hayden,Henry,Tommie
-Nathan,Josh Nozik,Guy
-Brodsky,Kanter,Kinel
-Simon,Louie,Jack
-A Steinfeld,J Steinfeld,Billy
-Carter,Ryan,Kfir
-Koss,Rubin,Chuck
-Samuel,Hayden,Henry
-Nathan,Josh Nozik,Guy
-Tommie,Simon,Louie
-Jack,Carter,Ryan
-Kfir,Nathan,Josh Nozik
-Brodsky,Kanter,Kinel
-A Steinfeld,J Steinfeld,Billy
-Guy,Brodsky,Kanter
-Koss,Rubin,Chuck
-Kinel,A Steinfeld,J Steinfeld
+Kinel,Simon,Louie
+Jack,Nathan,Josh Nozik
+Guy,A Steinfeld,J Steinfeld
 Billy,Koss,Rubin
+Chuck,Samuel,Hayden
+Henry,Tommie,Carter
+Simon,Louie,Jack
+Nathan,Josh Nozik,Billy
+Ryan,Kfir,Guy
+Koss,Brodsky,Kanter
+Kinel,A Steinfeld,J Steinfeld
+Brodsky,Kanter,Rubin
