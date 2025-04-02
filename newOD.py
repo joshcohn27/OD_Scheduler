@@ -56,15 +56,15 @@ def assign_staff(staff, schedule_template):
         return selected
     
     for day in schedule_template:
-        schedule.append(assign_day(day))
+        schedule.append((day, assign_day(day)))
     
     return schedule, assignments
 
 # Print the schedule
 def print_schedule(schedule, assignments):
     print("--------------------------------------------------")
-    for day, staff in enumerate(schedule, start=1):
-        print(f"Day {day}: {staff}")
+    for day, (day_type, staff) in enumerate(schedule, start=1):
+        print(f"Day {day} ({'Open' if day_type == 'O' else 'Closed'}): {staff}")
     print("--------------------------------------------------")
     print("Assignments per staff:")
     for staff, counts in assignments.items():
@@ -76,8 +76,9 @@ def export_schedule(schedule):
     csv_file_path = 'od_schedule.csv'
     with open(csv_file_path, mode='w', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow([VIL + str(i+1) for i in range(PER)])
-        writer.writerows(schedule)
+        writer.writerow(["O/C"] + [VIL + str(i+1) for i in range(PER)])
+        for day_type, staff in schedule:
+            writer.writerow(["Open" if day_type == "O" else "Closed"] + staff)
     print(f"\nData has been exported to {csv_file_path}\n")
 
 if __name__ == '__main__':

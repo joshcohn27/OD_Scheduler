@@ -1,24 +1,24 @@
-M1,M2,M3
-Rubin,Chuck,Samuel
-Hayden,Henry,Tommie
-Simon,Louie,Jack
-Carter,Ryan,Kfir
-Nathan,Josh Nozik,Guy
-Brodsky,Kanter,Kinel
-A Steinfeld,J Steinfeld,Billy
-Koss,Carter,Ryan
-Rubin,Chuck,Samuel
-Kfir,Brodsky,Kanter
-Hayden,Henry,Tommie
-Kinel,Simon,Louie
-Jack,Nathan,Josh Nozik
-Guy,A Steinfeld,J Steinfeld
-Billy,Koss,Rubin
-Chuck,Samuel,Hayden
-Henry,Tommie,Carter
-Simon,Louie,Jack
-Nathan,Josh Nozik,Billy
-Ryan,Kfir,Guy
-Koss,Brodsky,Kanter
-Kinel,A Steinfeld,J Steinfeld
-Brodsky,Kanter,Rubin
+O/C,M1,M2,M3
+Closed,Rubin,Chuck,Samuel
+Closed,Hayden,Henry,Tommie
+Closed,Simon,Louie,Jack
+Open,Carter,Ryan,Kfir
+Closed,Nathan,Josh Nozik,Guy
+Open,Brodsky,Kanter,Kinel
+Closed,A Steinfeld,J Steinfeld,Billy
+Closed,Koss,Carter,Ryan
+Open,Rubin,Chuck,Samuel
+Closed,Kfir,Brodsky,Kanter
+Open,Hayden,Henry,Tommie
+Closed,Kinel,Simon,Louie
+Closed,Jack,Nathan,Josh Nozik
+Open,Guy,A Steinfeld,J Steinfeld
+Closed,Billy,Koss,Rubin
+Closed,Chuck,Samuel,Hayden
+Closed,Henry,Tommie,Carter
+Open,Simon,Louie,Jack
+Open,Nathan,Josh Nozik,Billy
+Closed,Ryan,Kfir,Guy
+Open,Koss,Brodsky,Kanter
+Closed,Kinel,A Steinfeld,J Steinfeld
+Closed,Brodsky,Kanter,Rubin
